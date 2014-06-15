@@ -1,0 +1,50 @@
+"=====================================================
+"" General settings
+"=====================================================
+set backspace=indent,eol,start
+aunmenu Help.
+aunmenu Window.
+let no_buffers_menu=1
+set mousemodel=popup
+
+set ruler
+set completeopt-=preview
+set gcr=a:blinkon0
+if has("gui_running")
+    set cursorline
+endif
+
+set ttyfast
+
+syntax on   " enable syntax highlight
+
+tab sball
+set switchbuf=useopen
+
+set enc=utf-8         
+set ls=2             " show status bar always
+set incsearch        " incremental search
+set hlsearch         " highlight search results
+set nu               " show line numbers
+set scrolloff=5      " 5 lines per scroll
+
+set nobackup         " no backup files
+set nowritebackup    " only in case you don't want a backup file while editing
+set noswapfile       " no swap files
+
+set guioptions-=T
+
+set smarttab
+set expandtab
+set shiftwidth=4
+set tabstop=8
+
+" TagBar
+map <F4> :TagbarToggle<CR>
+let g:tagbar_autofocus = 0
+
+" NerdTree
+map <F3> :NERDTreeToggle<CR>
+" ignore files
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']
+
