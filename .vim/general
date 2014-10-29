@@ -2,14 +2,12 @@
 "" General settings
 "=====================================================
 set backspace=indent,eol,start
-aunmenu Help.
-aunmenu Window.
 let no_buffers_menu=1
 set mousemodel=popup
 
-set ruler
-set completeopt-=preview
-set gcr=a:blinkon0
+set ruler                       " line numbers
+set completeopt-=preview        " completion popup
+
 if has("gui_running")
     set cursorline
 endif
@@ -48,3 +46,12 @@ map <F3> :NERDTreeToggle<CR>
 " ignore files
 let NERDTreeIgnore=['\~$', '\.pyc$', '\.pyo$', '\.class$', 'pip-log\.txt$', '\.o$']
 
+
+" Key mappings
+map <C-a> <Home>
+map <C-e> <End>
+
+" Tabs
+map <C-T> :tabnew<CR>:NERDTree<CR>
+map <C-Right> :tabn<CR>
+map <C-Left> :tabp<CR>
